@@ -26,6 +26,11 @@ public class AudioManager : MonoBehaviour
             }
 
     }
+
+    public void RecogerObjetoCorrecto()
+    {
+        vFXSource.PlayOneShot(sonidosAmbientales[0]);
+    }
     void Start()
     {
         
