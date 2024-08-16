@@ -1,4 +1,5 @@
-# Veils of Redemption
+# EchoesOfResilience
+
 VR Escape Room Game
 Final project for the Unity Jr. Developer Bootcamp from Generation Colombia
 
