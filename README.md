@@ -1,5 +1,5 @@
 # Veils of Redemption
-## VR Escape Room Game
+VR Escape Room Game
 Final project for the Unity Jr. Developer Bootcamp from Generation Colombia
 
 ### Team:
