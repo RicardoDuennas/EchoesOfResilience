@@ -22,7 +22,7 @@ public class SonidosAleatorios : MonoBehaviour
     {
         int numeroAleatorio = Random.Range(1, 11);
         bool eleccion = (numeroAleatorio == 1);
-        Debug.Log(eleccion);
+        //Debug.Log(eleccion);
         return(eleccion);
     }
 
