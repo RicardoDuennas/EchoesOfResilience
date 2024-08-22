@@ -17,7 +17,7 @@ public class ProjectileAddon : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        // make sure only to stick to the first target you hit
+/*         // make sure only to stick to the first target you hit
         if (targetHit)
             return;
         else
@@ -38,6 +38,6 @@ public class ProjectileAddon : MonoBehaviour
         rb.isKinematic = true;
 
         // make sure projectile moves with target
-        transform.SetParent(collision.transform);
+        transform.SetParent(collision.transform); */
     }
 }
