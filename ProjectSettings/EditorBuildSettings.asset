@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Sound-VFX Gym.unity
     guid: 35ce0ee04ff82894d86a0484e12e0d1d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: 319dafa5c80f29f428dc1e0d03f04177
+  - enabled: 1
+    path: Assets/Scenes/GymScene Ricardo.unity
+    guid: fb99f703e925db84aaf722ce0a6bd51c
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 5e3ad21712fad1c4f98386548b92eae2, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: cfc16148506e31942abd51bfff7a7029, type: 2}
