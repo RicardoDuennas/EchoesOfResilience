@@ -31,6 +31,10 @@ public class AudioManager : MonoBehaviour
     {
         vFXSource.PlayOneShot(sonidosAmbientales[0]);
     }
+    public void RecogerLibro()
+    {
+        vFXSource.PlayOneShot(sonidosAmbientales[4]);
+    }
     void Start()
     {
         chimenea.PlayOneShot(sonidosAmbientales[3]);

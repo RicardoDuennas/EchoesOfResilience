@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0002297399, g: 0.00008028305, b: 0.0000039279153, a: 1}
+  m_IndirectSpecularColor: {r: 0.0002422956, g: 0.00008038886, b: 0.0000040849654, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -778,6 +778,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 336426667}
   m_CullTransparentMesh: 1
+--- !u!114 &398834110 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
+  m_PrefabInstance: {fileID: 1056282797}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8253d78107d8c543a749f0a6169ada6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &421848383
 GameObject:
   m_ObjectHideFlags: 0
@@ -2848,17 +2859,21 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
-      propertyPath: sonidosAmbientales.Array.data[2]
+      propertyPath: sonidosAmbientales.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: 7950ab0024625f044bb19d09307d1ace, type: 3}
     - target: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
-      propertyPath: sonidosAmbientales.Array.data[3]
+      propertyPath: sonidosAmbientales.Array.data[2]
       value: 
       objectReference: {fileID: 8300000, guid: aaaf4e228fef53b4ebd1feb9c9cfceb1, type: 3}
     - target: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
-      propertyPath: sonidosAmbientales.Array.data[4]
+      propertyPath: sonidosAmbientales.Array.data[3]
       value: 
       objectReference: {fileID: 8300000, guid: 5639207c81a066847b61182b3dacbf07, type: 3}
+    - target: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
+      propertyPath: sonidosAmbientales.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 88d917934d3a02945b513936566d62b3, type: 3}
     - target: {fileID: 331946582659075185, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3681,19 +3696,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1424893995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424893989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3d0653b53351cc4cbd2580aa0bb37ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomSource: {fileID: 1424893994}
 --- !u!135 &1424893996
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3715,6 +3717,34 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2.47
   m_Center: {x: 0, y: -2.78, z: 0.000000059604645}
+--- !u!114 &1424893998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424893989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6714919b1ab986948b1dcbfeee7705b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomSource: {fileID: 1424893994}
+  currentHitObject: {fileID: 0}
+  sonidoEscogido:
+  - {fileID: 8300000, guid: b41122a40d6d6e847a49315e15fc37fe, type: 3}
+  - {fileID: 8300000, guid: 2926f605b07a9d64ab7d42988750bed6, type: 3}
+  - {fileID: 8300000, guid: b2a5c5269488db148997752e6e131575, type: 3}
+  - {fileID: 8300000, guid: b41122a40d6d6e847a49315e15fc37fe, type: 3}
+  - {fileID: 8300000, guid: b41122a40d6d6e847a49315e15fc37fe, type: 3}
+  - {fileID: 8300000, guid: b41122a40d6d6e847a49315e15fc37fe, type: 3}
+  - {fileID: 8300000, guid: b41122a40d6d6e847a49315e15fc37fe, type: 3}
+  radioSphere: 1.8
+  maxDistance: 3.9
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  yaSono: 0
 --- !u!114 &1453740454 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7462879561657043759, guid: ad818c36731146e994540a1896ad8f24, type: 3}
@@ -9974,6 +10004,398 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 196984818577434309, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 196984818577434309, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 196984818577434309, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 196984818577434309, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 196984818577434309, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 196984818577434309, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 196984818577434309, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 210076225490459099, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 210076225490459099, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 210076225490459099, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 210076225490459099, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 210076225490459099, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 210076225490459099, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 210076225490459099, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 275984246288674756, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 275984246288674756, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 275984246288674756, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 275984246288674756, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 275984246288674756, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 275984246288674756, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 275984246288674756, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 384941708034713103, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384941708034713103, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384941708034713103, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 384941708034713103, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 384941708034713103, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 384941708034713103, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 384941708034713103, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 593462251245894376, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 593462251245894376, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 593462251245894376, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 593462251245894376, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 593462251245894376, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 593462251245894376, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 593462251245894376, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 665956392048953687, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 665956392048953687, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 665956392048953687, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 665956392048953687, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 665956392048953687, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 665956392048953687, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 665956392048953687, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 685233085527547512, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 685233085527547512, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 685233085527547512, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 685233085527547512, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 685233085527547512, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 685233085527547512, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 685233085527547512, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 705376179656265364, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 705376179656265364, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 705376179656265364, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 705376179656265364, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 705376179656265364, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 705376179656265364, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 705376179656265364, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 773907629552835446, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 773907629552835446, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 773907629552835446, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 773907629552835446, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 773907629552835446, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 773907629552835446, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 773907629552835446, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 949069019351815426, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 949069019351815426, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 949069019351815426, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 949069019351815426, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 949069019351815426, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 949069019351815426, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 949069019351815426, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598686942269802548, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598686942269802548, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598686942269802548, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 1598686942269802548, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598686942269802548, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598686942269802548, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598686942269802548, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1839741169134441471, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1839741169134441471, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1839741169134441471, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 1839741169134441471, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1839741169134441471, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 1839741169134441471, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 1839741169134441471, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891211156327140337, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891211156327140337, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891211156327140337, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 1891211156327140337, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891211156327140337, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891211156327140337, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891211156327140337, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2044702839966889817, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2044702839966889817, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2044702839966889817, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 2044702839966889817, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2044702839966889817, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 2044702839966889817, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 2044702839966889817, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2241980648765763227, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -10018,6 +10440,454 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2299709639428265103, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299709639428265103, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299709639428265103, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 2299709639428265103, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299709639428265103, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299709639428265103, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299709639428265103, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2306964141459318487, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2306964141459318487, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2306964141459318487, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 2306964141459318487, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2306964141459318487, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 2306964141459318487, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 2306964141459318487, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2802180775351324182, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2802180775351324182, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2802180775351324182, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 2802180775351324182, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2802180775351324182, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 2802180775351324182, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 2802180775351324182, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803019782911484448, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803019782911484448, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803019782911484448, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 2803019782911484448, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803019782911484448, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803019782911484448, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803019782911484448, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823135280056931634, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823135280056931634, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823135280056931634, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 2823135280056931634, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823135280056931634, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823135280056931634, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823135280056931634, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876620330854415807, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876620330854415807, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876620330854415807, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 2876620330854415807, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876620330854415807, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876620330854415807, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876620330854415807, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961084346670241697, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961084346670241697, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961084346670241697, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 2961084346670241697, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961084346670241697, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961084346670241697, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961084346670241697, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253528929992526711, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253528929992526711, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253528929992526711, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 3253528929992526711, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253528929992526711, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253528929992526711, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253528929992526711, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264281967840366164, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264281967840366164, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264281967840366164, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 3264281967840366164, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264281967840366164, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264281967840366164, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264281967840366164, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295229189818879588, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295229189818879588, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295229189818879588, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 3295229189818879588, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295229189818879588, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295229189818879588, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295229189818879588, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604718390295072166, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604718390295072166, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604718390295072166, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 3604718390295072166, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604718390295072166, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604718390295072166, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604718390295072166, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790018697924799447, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790018697924799447, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790018697924799447, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 3790018697924799447, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790018697924799447, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790018697924799447, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790018697924799447, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4002716090861136046, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4002716090861136046, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4002716090861136046, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 4002716090861136046, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4002716090861136046, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 4002716090861136046, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 4002716090861136046, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184849578106233722, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184849578106233722, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184849578106233722, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 4184849578106233722, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184849578106233722, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184849578106233722, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184849578106233722, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199977793074951404, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199977793074951404, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199977793074951404, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 4199977793074951404, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199977793074951404, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199977793074951404, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199977793074951404, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317044519544843095, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317044519544843095, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317044519544843095, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 4317044519544843095, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317044519544843095, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317044519544843095, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317044519544843095, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4350376045152887913, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.001
@@ -10030,9 +10900,1689 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.162
       objectReference: {fileID: 0}
+    - target: {fileID: 4379662196232090113, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379662196232090113, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379662196232090113, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 4379662196232090113, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379662196232090113, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379662196232090113, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379662196232090113, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486917051184395782, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486917051184395782, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486917051184395782, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 4486917051184395782, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486917051184395782, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486917051184395782, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486917051184395782, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667305994162759908, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667305994162759908, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667305994162759908, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 4667305994162759908, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667305994162759908, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667305994162759908, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667305994162759908, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755131095149263979, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755131095149263979, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755131095149263979, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 4755131095149263979, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755131095149263979, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755131095149263979, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755131095149263979, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826209321627769150, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826209321627769150, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826209321627769150, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 4826209321627769150, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826209321627769150, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826209321627769150, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826209321627769150, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837150353450901010, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837150353450901010, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837150353450901010, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 4837150353450901010, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837150353450901010, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837150353450901010, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837150353450901010, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945124401860932298, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945124401860932298, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945124401860932298, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 4945124401860932298, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945124401860932298, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945124401860932298, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945124401860932298, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948790736296123275, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948790736296123275, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948790736296123275, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 4948790736296123275, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948790736296123275, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948790736296123275, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948790736296123275, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295076747053939536, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295076747053939536, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295076747053939536, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 5295076747053939536, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295076747053939536, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295076747053939536, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295076747053939536, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308643723779950721, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308643723779950721, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308643723779950721, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 5308643723779950721, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308643723779950721, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308643723779950721, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308643723779950721, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332590867588474522, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332590867588474522, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332590867588474522, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 5332590867588474522, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332590867588474522, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332590867588474522, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332590867588474522, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463366697303164975, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463366697303164975, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463366697303164975, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 5463366697303164975, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463366697303164975, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463366697303164975, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463366697303164975, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645528351004286660, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645528351004286660, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645528351004286660, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 5645528351004286660, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645528351004286660, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645528351004286660, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645528351004286660, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5713347568612325547, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5713347568612325547, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5713347568612325547, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 5713347568612325547, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5713347568612325547, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 5713347568612325547, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 5713347568612325547, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760514971166707569, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760514971166707569, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760514971166707569, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 5760514971166707569, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760514971166707569, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760514971166707569, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760514971166707569, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894058145962218107, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894058145962218107, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894058145962218107, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 5894058145962218107, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894058145962218107, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894058145962218107, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894058145962218107, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986311136503702480, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986311136503702480, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986311136503702480, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 5986311136503702480, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986311136503702480, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986311136503702480, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986311136503702480, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990361362530136538, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990361362530136538, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990361362530136538, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 5990361362530136538, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990361362530136538, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990361362530136538, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990361362530136538, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049996663571483675, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049996663571483675, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049996663571483675, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 6049996663571483675, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049996663571483675, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049996663571483675, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049996663571483675, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6111438121694532976, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6111438121694532976, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6111438121694532976, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 6111438121694532976, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6111438121694532976, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 6111438121694532976, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 6111438121694532976, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211604764397814793, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211604764397814793, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211604764397814793, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 6211604764397814793, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211604764397814793, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211604764397814793, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211604764397814793, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238800374618047379, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238800374618047379, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238800374618047379, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 6238800374618047379, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238800374618047379, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238800374618047379, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238800374618047379, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6295124566788905354, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6295124566788905354, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6295124566788905354, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 6295124566788905354, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6295124566788905354, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 6295124566788905354, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 6295124566788905354, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355288961094392023, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355288961094392023, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355288961094392023, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 6355288961094392023, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355288961094392023, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355288961094392023, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355288961094392023, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525816501414362423, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525816501414362423, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525816501414362423, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 6525816501414362423, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525816501414362423, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525816501414362423, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525816501414362423, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627918860197465485, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627918860197465485, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627918860197465485, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 6627918860197465485, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627918860197465485, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627918860197465485, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627918860197465485, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635514583179856380, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635514583179856380, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635514583179856380, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 6635514583179856380, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635514583179856380, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635514583179856380, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635514583179856380, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698106862243242908, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698106862243242908, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698106862243242908, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 6698106862243242908, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698106862243242908, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698106862243242908, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698106862243242908, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824134670879742492, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824134670879742492, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824134670879742492, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 6824134670879742492, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824134670879742492, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824134670879742492, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824134670879742492, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975776757753284515, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975776757753284515, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975776757753284515, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 6975776757753284515, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975776757753284515, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975776757753284515, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975776757753284515, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6997348767123149117, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6997348767123149117, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6997348767123149117, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 6997348767123149117, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6997348767123149117, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 6997348767123149117, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 6997348767123149117, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048969338600429737, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048969338600429737, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048969338600429737, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 7048969338600429737, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048969338600429737, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048969338600429737, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048969338600429737, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058628179154836514, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058628179154836514, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058628179154836514, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 7058628179154836514, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058628179154836514, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058628179154836514, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058628179154836514, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206928136611942788, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206928136611942788, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206928136611942788, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 7206928136611942788, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206928136611942788, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206928136611942788, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206928136611942788, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334996761984618273, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334996761984618273, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334996761984618273, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 7334996761984618273, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334996761984618273, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334996761984618273, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334996761984618273, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423703233315506380, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423703233315506380, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423703233315506380, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 7423703233315506380, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423703233315506380, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423703233315506380, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423703233315506380, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536055558606794885, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536055558606794885, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536055558606794885, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 7536055558606794885, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536055558606794885, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536055558606794885, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536055558606794885, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543052603886256428, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543052603886256428, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543052603886256428, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 7543052603886256428, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543052603886256428, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543052603886256428, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543052603886256428, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590471702339553340, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590471702339553340, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590471702339553340, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 7590471702339553340, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590471702339553340, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590471702339553340, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590471702339553340, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624186814398053174, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624186814398053174, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624186814398053174, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 7624186814398053174, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624186814398053174, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624186814398053174, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624186814398053174, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7841428737604756025, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7841428737604756025, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7841428737604756025, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 7841428737604756025, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7841428737604756025, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 7841428737604756025, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 7841428737604756025, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852834642333879032, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852834642333879032, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852834642333879032, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 7852834642333879032, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852834642333879032, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852834642333879032, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852834642333879032, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012301297469727940, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012301297469727940, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012301297469727940, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 8012301297469727940, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012301297469727940, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012301297469727940, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012301297469727940, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076056790890754115, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076056790890754115, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076056790890754115, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 8076056790890754115, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076056790890754115, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076056790890754115, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076056790890754115, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088032193272815925, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088032193272815925, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088032193272815925, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 8088032193272815925, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088032193272815925, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088032193272815925, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088032193272815925, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272069715452285506, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272069715452285506, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272069715452285506, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 8272069715452285506, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272069715452285506, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272069715452285506, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272069715452285506, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8388911196424945613, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8388911196424945613, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8388911196424945613, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 8388911196424945613, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8388911196424945613, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8388911196424945613, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 8388911196424945613, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439385217347893666, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439385217347893666, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439385217347893666, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 8439385217347893666, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439385217347893666, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439385217347893666, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439385217347893666, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8535614485242310015, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8535614485242310015, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8535614485242310015, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 8535614485242310015, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8535614485242310015, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8535614485242310015, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 8535614485242310015, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543931202229107085, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543931202229107085, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543931202229107085, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 8543931202229107085, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543931202229107085, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543931202229107085, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543931202229107085, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8652520474213290666, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8652520474213290666, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8652520474213290666, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 8652520474213290666, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8652520474213290666, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8652520474213290666, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 8652520474213290666, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8748736626894098763, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8748736626894098763, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8748736626894098763, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 8748736626894098763, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8748736626894098763, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8748736626894098763, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 8748736626894098763, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787743955015826861, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787743955015826861, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787743955015826861, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 8787743955015826861, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787743955015826861, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787743955015826861, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787743955015826861, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805853123558726166, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805853123558726166, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805853123558726166, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 8805853123558726166, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805853123558726166, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805853123558726166, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805853123558726166, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928829048534333005, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928829048534333005, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928829048534333005, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 8928829048534333005, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928829048534333005, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928829048534333005, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928829048534333005, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8958435259379364679, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8958435259379364679, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8958435259379364679, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 8958435259379364679, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8958435259379364679, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8958435259379364679, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 8958435259379364679, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963089251482920811, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963089251482920811, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963089251482920811, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 8963089251482920811, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963089251482920811, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963089251482920811, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963089251482920811, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8986625743782525563, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
       propertyPath: m_Name
       value: Example Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 8992236800736468391, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8992236800736468391, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8992236800736468391, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 8992236800736468391, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8992236800736468391, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8992236800736468391, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 8992236800736468391, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9039380269503732051, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9039380269503732051, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9039380269503732051, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 9039380269503732051, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9039380269503732051, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 9039380269503732051, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 9039380269503732051, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067485286262107360, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067485286262107360, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067485286262107360, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 398834110}
+    - target: {fileID: 9067485286262107360, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067485286262107360, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecogerLibro
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067485286262107360, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Unity.XR.Interaction.Toolkit.Samples.StarterAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067485286262107360, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10043,13 +12593,13 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6833004640682480114, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1424893995}
-    - targetCorrespondingSourceObject: {fileID: 6833004640682480114, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1424893994}
     - targetCorrespondingSourceObject: {fileID: 6833004640682480114, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1424893996}
+    - targetCorrespondingSourceObject: {fileID: 6833004640682480114, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1424893998}
   m_SourcePrefab: {fileID: 100100000, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
 --- !u!114 &54541284065889038
 MonoBehaviour:
@@ -14328,8 +16878,6 @@ GameObject:
   - component: {fileID: 3127728407058736456}
   - component: {fileID: 3297350934172959462}
   - component: {fileID: 4090221840072891318}
-  - component: {fileID: 7873184976584795773}
-  - component: {fileID: 7873184976584795772}
   - component: {fileID: 7873184976584795774}
   m_Layer: 2
   m_Name: XR Origin (XR Rig)
@@ -14430,56 +16978,6 @@ MonoBehaviour:
   m_CameraFloorOffsetObject: {fileID: 9014170785323426437}
   m_RequestedTrackingOriginMode: 0
   m_CameraYOffset: 1.36144
---- !u!54 &7873184976584795772
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7696548426158909434}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
---- !u!136 &7873184976584795773
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7696548426158909434}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.12
-  m_Height: 1.7927768
-  m_Direction: 1
-  m_Center: {x: -0, y: 1.3063885, z: 0}
 --- !u!143 &7873184976584795774
 CharacterController:
   m_ObjectHideFlags: 0
@@ -14497,9 +16995,9 @@ CharacterController:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
+  m_Height: 1.72
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
