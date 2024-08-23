@@ -5055,7 +5055,6 @@ GameObject:
   - component: {fileID: 1297344743}
   - component: {fileID: 1297344742}
   - component: {fileID: 1297344741}
-  - component: {fileID: 1297344740}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -5063,26 +5062,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1297344740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1297344739}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6714919b1ab986948b1dcbfeee7705b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomSource: {fileID: 0}
-  currentHitObject: {fileID: 0}
-  radioSphere: 0
-  maxDistance: 0
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  yaSono: 0
 --- !u!135 &1297344741
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9089,8 +9068,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomSource: {fileID: 1821300323770547042}
   currentHitObject: {fileID: 0}
-  radioSphere: 1.7
-  maxDistance: 0
+  sonidoEscogido:
+  - {fileID: 8300000, guid: b41122a40d6d6e847a49315e15fc37fe, type: 3}
+  - {fileID: 8300000, guid: b41122a40d6d6e847a49315e15fc37fe, type: 3}
+  - {fileID: 8300000, guid: 2926f605b07a9d64ab7d42988750bed6, type: 3}
+  - {fileID: 8300000, guid: b2a5c5269488db148997752e6e131575, type: 3}
+  - {fileID: 8300000, guid: b41122a40d6d6e847a49315e15fc37fe, type: 3}
+  - {fileID: 8300000, guid: b41122a40d6d6e847a49315e15fc37fe, type: 3}
+  - {fileID: 8300000, guid: b41122a40d6d6e847a49315e15fc37fe, type: 3}
+  radioSphere: 2.03
+  maxDistance: 4.5
   layerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -13044,6 +13031,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
+      propertyPath: sonidosCandelabro.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
+      propertyPath: sonidosAmbientales.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
+      propertyPath: sonidosCandelabro.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: b41122a40d6d6e847a49315e15fc37fe, type: 3}
+    - target: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
+      propertyPath: sonidosCandelabro.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: b41122a40d6d6e847a49315e15fc37fe, type: 3}
+    - target: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
+      propertyPath: sonidosCandelabro.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2926f605b07a9d64ab7d42988750bed6, type: 3}
+    - target: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
+      propertyPath: sonidosCandelabro.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: b41122a40d6d6e847a49315e15fc37fe, type: 3}
+    - target: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
+      propertyPath: sonidosCandelabro.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: b41122a40d6d6e847a49315e15fc37fe, type: 3}
+    - target: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
+      propertyPath: sonidosCandelabro.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: b2a5c5269488db148997752e6e131575, type: 3}
+    - target: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
+      propertyPath: sonidosAmbientales.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: efd375c67588f1944adff8a2f34aa453, type: 3}
+    - target: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
+      propertyPath: sonidosAmbientales.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: efd375c67588f1944adff8a2f34aa453, type: 3}
     - target: {fileID: 331946582659075185, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
       propertyPath: m_RootOrder
       value: 4

@@ -31,9 +31,9 @@ public class AudioManager : MonoBehaviour
     {
         vFXSource.PlayOneShot(sonidosAmbientales[0]);
     }
-    public void SonidosCandelabro()
+    public void RecogerLibro()
     {
-        vFXSource.PlayOneShot(sonidosAmbientales[1]);
+        vFXSource.PlayOneShot(sonidosAmbientales[4]);
     }
     void Start()
     {
