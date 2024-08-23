@@ -1,34 +1,52 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour
 {
-    public float gameDuration = 300f; // 5 minutos en segundos
-    private float timeRemaining;
-    public GameObject gameOverMenu;
+    public float timeRemaining = 300f; // 5 minutos en segundos
+    public Text timerText; //  texto para mostrar el tiempo
+    public GameObject gameOverPanel; // Referencia al panel de Game Over
+
+    private bool timerIsRunning = false;
 
     void Start()
     {
-        timeRemaining = gameDuration;
-        gameOverMenu.SetActive(false);
+        timerIsRunning = true;
+        gameOverPanel.SetActive(false);
     }
 
     void Update()
     {
-        if (timeRemaining > 0)
+        if (timerIsRunning)
         {
-            timeRemaining -= Time.deltaTime;
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+                DisplayTime(timeRemaining);
+            }
+            else
+            {
+                timeRemaining = 0;
+                timerIsRunning = false;
+                GameOver();
+            }
         }
-        else
-        {
-            GameOver();
-        }
+    }
+
+    void DisplayTime(float timeToDisplay)
+    {
+        timeToDisplay += 1;
+
+        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     void GameOver()
     {
-        // Detén el tiempo y activa el menú de "Game Over"
-        Time.timeScale = 0f;
-        gameOverMenu.SetActive(true);
+        gameOverPanel.SetActive(true);
+        Time.timeScale = 0f; // Detener el tiempo
     }
 }
