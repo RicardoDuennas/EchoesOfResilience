@@ -3107,11 +3107,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1149450743610261583, guid: dc02f77b0506f764c9d22c61c681c4af, type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 1149450743610261583, guid: dc02f77b0506f764c9d22c61c681c4af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.251482
+      value: -9.18
       objectReference: {fileID: 0}
     - target: {fileID: 1149450743610261583, guid: dc02f77b0506f764c9d22c61c681c4af, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4037,7 +4037,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133822410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.668, y: 1.6, z: 14.243}
+  m_LocalPosition: {x: -2.553, y: 1.2, z: 10.6}
   m_LocalScale: {x: 0.19605462, y: 0.366198, z: 0.34038}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5440,8 +5440,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d28755c85b781de4f942625f5624318a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  head: {fileID: 0}
-  feet: {fileID: 0}
 --- !u!54 &1389267061
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12483,7 +12481,7 @@ PrefabInstance:
     - target: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
       propertyPath: sonidosVoces.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 7950ab0024625f044bb19d09307d1ace, type: 3}
+      objectReference: {fileID: 8300000, guid: 68c13ffaa0208c54b838d3182acb13cb, type: 3}
     - target: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
       propertyPath: sonidosCandelabro.Array.size
       value: 6
