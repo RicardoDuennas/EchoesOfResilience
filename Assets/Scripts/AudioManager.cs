@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] sonidosAmbientales;
     public AudioClip[] sonidosVoces;
     [SerializeField] AudioMixer mixerGeneral;
+    public bool recogioLibro = false;
 
     private static AudioManager instance;
 
@@ -40,10 +41,13 @@ public class AudioManager : MonoBehaviour
         chimenea.PlayOneShot(sonidosAmbientales[3]);
         afueras.PlayOneShot(sonidosAmbientales[4]);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void ActivacionConversacion()
     {
-        
+        if(recogioLibro == false)
+        {
+            vFXSource.PlayOneShot(sonidosVoces[0]);
+        }
+        recogioLibro = true;
     }
+
 }
