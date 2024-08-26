@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GymScene Juan.unity
     guid: 182d69d7d8425415da24bfb8cf1f5a36
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Sound-VFX Gym.unity
     guid: 35ce0ee04ff82894d86a0484e12e0d1d
   - enabled: 0
