@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/GymScene Juan.unity
     guid: 182d69d7d8425415da24bfb8cf1f5a36
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Sound-VFX Gym.unity
     guid: 35ce0ee04ff82894d86a0484e12e0d1d
   - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: 319dafa5c80f29f428dc1e0d03f04177
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GymScene Ricardo.unity
     guid: fb99f703e925db84aaf722ce0a6bd51c
   m_configObjects:
