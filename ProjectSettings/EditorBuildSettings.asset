@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MainScene Test.unity
     guid: 9f5c9a8498bab42e18482f1304572180
+  - enabled: 0
+    path: Assets/Scenes/GymScene Sofia.unity
+    guid: faf6a5662143794439c9ca9b891067f1
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 5e3ad21712fad1c4f98386548b92eae2, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: cfc16148506e31942abd51bfff7a7029, type: 2}
