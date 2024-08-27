@@ -1,18 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
-    public GameObject menu;
+    public GameObject startMenu;
+    public GameObject winPanel;
+    public GameObject gameOverPanel;
 
     public void OnStartButtonClicked()
     {
-        menu.SetActive(false);
+        startMenu.SetActive(false);
     }
 
-    void Start()
+    public void ShowWinPanel()
     {
-        menu.SetActive(true);
+        winPanel.SetActive(true);
+    }
+
+    public void ShowGameOverPanel()
+    {
+        gameOverPanel.SetActive(true);
+    }
+
+    public void OnRestartButtonClicked()
+    {
+        winPanel.SetActive(false);
+        gameOverPanel.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
