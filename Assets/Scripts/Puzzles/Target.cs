@@ -1,50 +1,68 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Target : MonoBehaviour
 {
 
     private bool targetHit;
     private Rigidbody rb;
+    private GameObject moonGameObject;
+    private GameObject sunGameObject;
+    private GameObject americaObject;
+    DartReceiver moonScript;
+    DartReceiver sunScript;
+    DartReceiver americaScript;
+    [SerializeField] private bool[] darts = new bool[3];
     public int damage;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+
+        moonScript = GameObject.Find("Moon").GetComponent<DartReceiver>(); 
+        sunScript = GameObject.Find("Sun").GetComponent<DartReceiver>(); 
+        americaScript = GameObject.Find("America").GetComponent<DartReceiver>(); 
+        darts[0] = false;
+        darts[1] = false;
+        darts[2] = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         
-    }
+    } 
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Hola");
         // check if you hit an enemy
         if(collision.gameObject.CompareTag("Dart"))
         {
-            //BasicEnemy enemy = collision.gameObject.GetComponent<BasicEnemy>();
-            GameObject dart = collision.gameObject;
-            dart.tag = "DartAttached";
+            bool hit = false;
 
-            rb = dart.GetComponent<Rigidbody>();
-            // make sure projectile sticks to surface
-            Debug.Log(rb.isKinematic);
-            rb.isKinematic = true;
-           Debug.Log(rb.isKinematic);
- 
-            // Vector3 tempPos = rb.transform.position;
-            // Debug.Log(rb.transform.position);
+            if (moonScript.success && !darts[0])
+            {   darts[0] = true;
+                hit = true;
+            } else if (sunScript.success  && !darts[1]){
+                darts[1] = true;
+                hit = true;
+            } else if (americaScript.success && !darts[2]){
+                darts[2] = true;
+                hit = true;
+            }
             
-            // // make sure projectile moves with target
-            // rb.transform.SetParent(this.transform, false); 
-            // //rb.transform.position = tempPos;
+            if (hit){
+                GameObject dart = collision.gameObject;
+                dart.tag = "DartAttached";
 
-            // Debug.Log(rb.transform.position);
+                rb = dart.GetComponent<Rigidbody>();
+                // make sure projectile sticks to surface
+                rb.isKinematic = true;
+                dart.GetComponent<XRGrabInteractable>().enabled = false;
+            } else {
+
+            }
 
         }
     }
