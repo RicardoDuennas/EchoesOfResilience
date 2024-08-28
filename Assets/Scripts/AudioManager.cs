@@ -42,6 +42,11 @@ public class AudioManager : MonoBehaviour
     {
         vFXSource.PlayOneShot(sonidosAmbientales[1]);
     }
+
+    public void PlayWinPuzzleSound()
+    {
+        vFXSource.PlayOneShot(sonidosAmbientales[6]);
+    }
     public void RecogerLibro()
     {
         vFXSource.PlayOneShot(sonidosAmbientales[4]);
