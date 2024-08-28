@@ -13,23 +13,34 @@ public class AudioManager : MonoBehaviour
 
     private static AudioManager instance;
 
-    public static AudioManager Instance {get{return instance;}}
+    public static AudioManager Instance { get { return instance; } }
 
-    private void Awake() {
-            if ( instance == null )
-            {
-                instance = this;
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
 
     }
 
     public void RecogerObjetoCorrecto()
     {
         vFXSource.PlayOneShot(sonidosAmbientales[0]);
+    }
+
+    public void PlayPositiveActionSound()
+    {
+        vFXSource.PlayOneShot(sonidosAmbientales[0]);
+    }
+
+    public void PlayNegativeActionSound()
+    {
+        vFXSource.PlayOneShot(sonidosAmbientales[1]);
     }
     public void RecogerLibro()
     {
@@ -41,9 +52,8 @@ public class AudioManager : MonoBehaviour
         afueras.PlayOneShot(sonidosAmbientales[4]);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StopSounds()
     {
-        
+        vFXSource.Stop();
     }
 }
