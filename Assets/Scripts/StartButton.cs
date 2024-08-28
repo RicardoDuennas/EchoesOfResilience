@@ -24,10 +24,5 @@ public class StartButton : MonoBehaviour
         gameOverPanel.SetActive(true);
     }
 
-    public void OnRestartButtonClicked()
-    {
-        winPanel.SetActive(false);
-        gameOverPanel.SetActive(false);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+    
 }

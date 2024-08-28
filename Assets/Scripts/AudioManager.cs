@@ -6,10 +6,11 @@ using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioSource vFXSource, musicSource, chimenea, afueras;
+    public AudioSource vFXSource, musicSource, afueras;
     public AudioClip[] sonidosAmbientales;
     public AudioClip[] sonidosVoces;
     [SerializeField] AudioMixer mixerGeneral;
+    public bool recogioLibro = false;
 
     private static AudioManager instance;
 
@@ -53,7 +54,6 @@ public class AudioManager : MonoBehaviour
     }
     void Start()
     {
-        chimenea.PlayOneShot(sonidosAmbientales[3]);
         afueras.PlayOneShot(sonidosAmbientales[4]);
     }
 
@@ -61,4 +61,5 @@ public class AudioManager : MonoBehaviour
     {
         vFXSource.Stop();
     }
+
 }

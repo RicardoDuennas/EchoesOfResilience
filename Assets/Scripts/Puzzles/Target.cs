@@ -27,6 +27,7 @@ public class Target : MonoBehaviour
         // check if you hit an enemy
         if(collision.gameObject.CompareTag("Dart"))
         {
+            AudioManager.Instance.vFXSource.PlayOneShot(AudioManager.Instance.sonidosAmbientales[6]);
             //BasicEnemy enemy = collision.gameObject.GetComponent<BasicEnemy>();
             GameObject dart = collision.gameObject;
             dart.tag = "DartAttached";
