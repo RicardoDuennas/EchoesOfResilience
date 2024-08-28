@@ -10,7 +10,7 @@ public class SonidoLibrosSuelo : MonoBehaviour
     {
         audioSource = AudioManager.Instance.vFXSource;
         audioSource.enabled = false; 
-        Invoke("EnableAudioSource", 2f);
+        Invoke("EnableAudioSource", 1f);
     }
 
     void EnableAudioSource()
