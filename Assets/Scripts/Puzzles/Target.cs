@@ -46,6 +46,9 @@ public class Target : MonoBehaviour
         if(collision.gameObject.CompareTag("Dart"))
         {
             Debug.Log("1");
+            dart = collision.gameObject;
+            rb = dart.GetComponent<Rigidbody>();
+
             AudioManager.Instance.vFXSource.PlayOneShot(AudioManager.Instance.sonidosAmbientales[6]);
             
             bool hit = false;
@@ -64,17 +67,18 @@ public class Target : MonoBehaviour
             
             if (hit){
                 Debug.Log("4");
-                dart = collision.gameObject;
                 dart.tag = "DartAttached";
 
-                rb = dart.GetComponent<Rigidbody>();
 
                 // make sure projectile sticks to surface
                 rb.isKinematic = true;
                 dart.GetComponent<XRGrabInteractable>().enabled = false;
             } else {
                 Debug.Log("5");
-                Tween.Position(dart.transform, endValue: new Vector3(-53.3899994f,1.56799996f,-4.92799997f), duration: 3);
+                Debug.Log(hit);
+                Debug.Log(dart.name);
+                rb.isKinematic = true;
+                Tween.LocalPosition(dart.transform, endValue: new Vector3(-53.76f,1.562f,-4.99f), duration: 7);
             }
 
         }
