@@ -42,11 +42,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 7293294006992331763, guid: b1e1718beb5d3ae4c97f4e36089a4e2f, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e168236fde4b997439113b2aa1804ea3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.505
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -160,7 +160,7 @@ Transform:
   - {fileID: 4254716530308507558}
   - {fileID: 8460480486241388523}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &275524624144201117
 MonoBehaviour:
@@ -176,11 +176,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vFXSource: {fileID: 705048434890141739}
   musicSource: {fileID: 4815784866610592237}
+  afueras: {fileID: 0}
   sonidosAmbientales:
   - {fileID: 8300000, guid: efd375c67588f1944adff8a2f34aa453, type: 3}
-  - {fileID: 8300000, guid: 2926f605b07a9d64ab7d42988750bed6, type: 3}
-  sonidosVoces: []
+  - {fileID: 8300000, guid: 58d3042e4a9f34ce79d27a9ca65a93a8, type: 3}
+  - {fileID: 8300000, guid: 7950ab0024625f044bb19d09307d1ace, type: 3}
+  - {fileID: 8300000, guid: aaaf4e228fef53b4ebd1feb9c9cfceb1, type: 3}
+  - {fileID: 8300000, guid: 5639207c81a066847b61182b3dacbf07, type: 3}
+  - {fileID: 8300000, guid: 88d917934d3a02945b513936566d62b3, type: 3}
+  - {fileID: 8300000, guid: bd64f7fa228874e19a9a5116308aaa4f, type: 3}
+  - {fileID: 8300000, guid: 022d5f694a944124a8660616182f5272, type: 3}
+  sonidosVoces:
+  - {fileID: 8300000, guid: dc5c460b0726c27468831a64599b49c6, type: 3}
+  - {fileID: 8300000, guid: 20d9fcb9d12a9f94cb7c94673d9e0e8d, type: 3}
+  - {fileID: 8300000, guid: a8f51eaad1a67af4a8c6ece290ed2bd2, type: 3}
   mixerGeneral: {fileID: 24100000, guid: b1e1718beb5d3ae4c97f4e36089a4e2f, type: 2}
+  recogioLibro: 0
 --- !u!1 &8319435827192840803
 GameObject:
   m_ObjectHideFlags: 0
