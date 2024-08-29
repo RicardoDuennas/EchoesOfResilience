@@ -6,7 +6,7 @@ public class SocketTagChecker : MonoBehaviour
     public string requiredTag;
     public ParticleSystem successParticle;
     public EscapeRoomManager escapeRoomManager;
-    public int puzzleIndex; // El índice del puzzle que corresponde a los libros
+    public int puzzleIndex;
     public int conditionIndex; // El índice de la condición para este libro específico
 
     private XRSocketInteractor socketInteractor;
@@ -26,8 +26,8 @@ public class SocketTagChecker : MonoBehaviour
             isCorrectlyPlaced = true;
             successParticle.Play();
             AudioManager.Instance.PlayPositiveActionSound();
-            escapeRoomManager.SetPuzzleCondition(puzzleIndex, conditionIndex, true); // Reporta la condición al GameManager
-            escapeRoomManager.CheckPuzzleCompletion(); // Verifica si el puzzle está completo
+            escapeRoomManager.SetPuzzleCondition(puzzleIndex, conditionIndex, true);
+            escapeRoomManager.CheckPuzzleCompletion();
         }
         else
         {
@@ -44,7 +44,7 @@ public class SocketTagChecker : MonoBehaviour
             isCorrectlyPlaced = false;
             successParticle.Stop();
             AudioManager.Instance.StopSounds();
-            escapeRoomManager.SetPuzzleCondition(puzzleIndex, conditionIndex, false); // Marca la condición como no cumplida
+            escapeRoomManager.SetPuzzleCondition(puzzleIndex, conditionIndex, false);
         }
         else
         {
