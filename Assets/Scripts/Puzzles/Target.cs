@@ -14,18 +14,26 @@ public class Target : MonoBehaviour
     DartReceiver leftMapScript;
     DartReceiver rightMapScript;
     GameObject dart;
-    [SerializeField] private bool[] targets = new bool[3];
-    public int damage;
+    [SerializeField] private bool[] targets = new bool[2];
+    public ParticleSystem successParticleLeft;
+    public ParticleSystem successParticleRight;
+    public GameObject dartTemp;
+    private Rigidbody rbTemp;
+
 
     void Awake()
     {
 
-        leftMapScript = GameObject.Find("Moon").GetComponent<DartReceiver>(); 
-        rightMapScript = GameObject.Find("Sun").GetComponent<DartReceiver>(); 
+        leftMapScript = GameObject.Find("LeftMap").GetComponent<DartReceiver>(); 
+        rightMapScript = GameObject.Find("RightMap").GetComponent<DartReceiver>(); 
         targets[0] = false;
         targets[1] = false;
+        rbTemp = dartTemp.GetComponent<Rigidbody>();
     }
 
+    void Start() {
+        rbTemp.AddForce(transform.forward, ForceMode.Impulse);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -37,19 +45,21 @@ public class Target : MonoBehaviour
         // check if you hit an enemy
         if(collision.gameObject.CompareTag("Dart"))
         {
-            AudioManager.Instance.vFXSource.PlayOneShot(AudioManager.Instance.sonidosAmbientales[6]);
             Debug.Log("1");
-
+            AudioManager.Instance.vFXSource.PlayOneShot(AudioManager.Instance.sonidosAmbientales[6]);
+            
             bool hit = false;
 
             if (leftMapScript.success && !targets[0])
             {   targets[0] = true;
                 hit = true;
-            Debug.Log("2");
+                successParticleLeft.Play();
+                Debug.Log("2");
             } else if (rightMapScript.success  && !targets[1]){
                 targets[1] = true;
                 hit = true;
-            Debug.Log("3");
+                successParticleRight.Play();
+                Debug.Log("3");
             }
             
             if (hit){
@@ -58,6 +68,7 @@ public class Target : MonoBehaviour
                 dart.tag = "DartAttached";
 
                 rb = dart.GetComponent<Rigidbody>();
+
                 // make sure projectile sticks to surface
                 rb.isKinematic = true;
                 dart.GetComponent<XRGrabInteractable>().enabled = false;
