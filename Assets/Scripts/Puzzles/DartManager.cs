@@ -18,6 +18,7 @@ public class DartManager : MonoBehaviour
             if (darts[i] != null)
             {
                 dartPositions[i] = darts[i].position;
+                Debug.Log(dartPositions[i]);
             }
             else
             {

@@ -14,6 +14,7 @@ public class Target : MonoBehaviour
     DartReceiver leftMapScript;
     DartReceiver rightMapScript;
     GameObject dart;
+    public DartManager dartManager;
     [SerializeField] private bool[] targets = new bool[2];
     public ParticleSystem successParticleLeft;
     public ParticleSystem successParticleRight;
@@ -33,6 +34,14 @@ public class Target : MonoBehaviour
 
     void Start() {
         rbTemp.AddForce(transform.forward, ForceMode.Impulse);
+        Debug.Log(dartManager.GetDartPosition(0));
+        Debug.Log(dartManager.GetDartPosition(1));
+        Debug.Log(dartManager.GetDartPosition(2));
+        Debug.Log(dartManager.GetDartPosition(3));
+        Debug.Log(dartManager.GetDartPosition(4));
+        Debug.Log(dartManager.GetDartPosition(5));
+        
+
     }
     // Update is called once per frame
     void Update()
@@ -75,10 +84,9 @@ public class Target : MonoBehaviour
                 dart.GetComponent<XRGrabInteractable>().enabled = false;
             } else {
                 Debug.Log("5");
-                Debug.Log(hit);
-                Debug.Log(dart.name);
                 rb.isKinematic = true;
-                Tween.LocalPosition(dart.transform, endValue: new Vector3(-53.76f,1.562f,-4.99f), duration: 7);
+                int posTemp = dart.name[4];
+                Tween.LocalPosition(dart.transform, endValue: dartManager.GetDartPosition(posTemp), duration: 7);
             }
 
         }
