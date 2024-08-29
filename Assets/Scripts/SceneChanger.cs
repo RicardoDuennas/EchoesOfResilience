@@ -5,6 +5,6 @@ public class SceneChanger : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("_Main"); 
+        SceneManager.LoadScene("MainFinal");
     }
 }

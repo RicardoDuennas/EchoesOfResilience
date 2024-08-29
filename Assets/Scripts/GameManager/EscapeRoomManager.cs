@@ -106,8 +106,4 @@ public class EscapeRoomManager : MonoBehaviour
         AudioManager.Instance.vFXSource.PlayOneShot(AudioManager.Instance.sonidosVoces[index]);
     }
 
-    public void RepodructorPista1()
-    {
-        StartCoroutine(ReproduccionPista(0, 5f));
-    }
 }

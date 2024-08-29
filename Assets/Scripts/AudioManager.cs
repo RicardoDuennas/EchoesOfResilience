@@ -61,4 +61,9 @@ public class AudioManager : MonoBehaviour
         vFXSource.Stop();
     }
 
+    public void RepodructorPista1()
+    {
+        vFXSource.PlayOneShot(sonidosVoces[0]);
+    }
+
 }
