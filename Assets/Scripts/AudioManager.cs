@@ -6,24 +6,26 @@ using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioSource vFXSource, musicSource, chimenea, afueras;
+    public AudioSource vFXSource, musicSource, afueras;
     public AudioClip[] sonidosAmbientales;
     public AudioClip[] sonidosVoces;
     [SerializeField] AudioMixer mixerGeneral;
+    public bool recogioLibro = false;
 
     private static AudioManager instance;
 
-    public static AudioManager Instance {get{return instance;}}
+    public static AudioManager Instance { get { return instance; } }
 
-    private void Awake() {
-            if ( instance == null )
-            {
-                instance = this;
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
 
     }
 
@@ -31,19 +33,33 @@ public class AudioManager : MonoBehaviour
     {
         vFXSource.PlayOneShot(sonidosAmbientales[0]);
     }
+
+    public void PlayPositiveActionSound()
+    {
+        vFXSource.PlayOneShot(sonidosAmbientales[0]);
+    }
+
+    public void PlayNegativeActionSound()
+    {
+        vFXSource.PlayOneShot(sonidosAmbientales[1]);
+    }
+
+    public void PlayWinPuzzleSound()
+    {
+        vFXSource.PlayOneShot(sonidosAmbientales[6]);
+    }
     public void RecogerLibro()
     {
         vFXSource.PlayOneShot(sonidosAmbientales[4]);
     }
     void Start()
     {
-        chimenea.PlayOneShot(sonidosAmbientales[3]);
         afueras.PlayOneShot(sonidosAmbientales[4]);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StopSounds()
     {
-        
+        vFXSource.Stop();
     }
+
 }
