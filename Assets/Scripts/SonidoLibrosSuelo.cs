@@ -19,6 +19,6 @@ public class SonidoLibrosSuelo : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) {
-        AudioManager.Instance.vFXSource.PlayOneShot(AudioManager.Instance.sonidosAmbientales[5]);
+        AudioManager.Instance.vFXSource.PlayOneShot(AudioManager.Instance.sonidosAmbientales[7]);
     }
 }
