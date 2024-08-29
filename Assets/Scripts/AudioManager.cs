@@ -56,7 +56,6 @@ public class AudioManager : MonoBehaviour
     {
         afueras.PlayOneShot(sonidosAmbientales[4]);
     }
-
     public void StopSounds()
     {
         vFXSource.Stop();

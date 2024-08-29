@@ -53,8 +53,14 @@ public class EscapeRoomManager : MonoBehaviour
             {
                 puzzle.isCompleted = true;
                 StartCoroutine(PlayWinPuzzleSoundWithDelay(2f));  // Reproduce el sonido con un delay de 2 segundos
+                StartCoroutine(ReproduccionPista(1, 4f));
             }
 
+            if (i == 1 && puzzleCompleted && !puzzle.isCompleted)
+            {
+                puzzle.isCompleted = true;
+                StartCoroutine(ReproduccionPista(2, 4f));
+            }
             if (!puzzleCompleted)
             {
                 allPuzzlesCompleted = false;
@@ -93,5 +99,15 @@ public class EscapeRoomManager : MonoBehaviour
         {
             statusText.text = "Time's up! Better luck next time.";
         }
+    }
+    private IEnumerator ReproduccionPista(int index, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        AudioManager.Instance.vFXSource.PlayOneShot(AudioManager.Instance.sonidosVoces[index]);
+    }
+
+    public void RepodructorPista1()
+    {
+        StartCoroutine(ReproduccionPista(0, 5f));
     }
 }
