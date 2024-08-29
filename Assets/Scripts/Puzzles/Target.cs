@@ -37,6 +37,7 @@ public class Target : MonoBehaviour
         // check if you hit an enemy
         if(collision.gameObject.CompareTag("Dart"))
         {
+            AudioManager.Instance.vFXSource.PlayOneShot(AudioManager.Instance.sonidosAmbientales[6]);
             Debug.Log("1");
 
             bool hit = false;

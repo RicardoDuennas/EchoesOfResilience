@@ -7,15 +7,12 @@ public class EscapeRoomManager : MonoBehaviour
     [System.Serializable]
     public class Puzzle
     {
-        public bool[] conditions = new bool[3];
+        public bool[] conditions;
+        public bool isCompleted = false;
     }
 
-    public Puzzle[] puzzles = new Puzzle[4];
+    public Puzzle[] puzzles;
 
-    //Puzzle 1: Put books on sockets
-    //Puzzle 2: Reorder books on table
-    //Puzzle 3: Launch dats to map
-    
     public Text statusText;
 
     private bool gameOver = false;
@@ -32,13 +29,16 @@ public class EscapeRoomManager : MonoBehaviour
         }
     }
 
-    void CheckPuzzleCompletion()
+    public void CheckPuzzleCompletion()
     {
         bool allPuzzlesCompleted = true;
 
-        foreach (Puzzle puzzle in puzzles)
+        for (int i = 0; i < puzzles.Length; i++)
         {
+            Puzzle puzzle = puzzles[i];
             bool puzzleCompleted = true;
+
+
             foreach (bool condition in puzzle.conditions)
             {
                 if (!condition)
@@ -48,10 +48,16 @@ public class EscapeRoomManager : MonoBehaviour
                 }
             }
 
+            // Si todas las condiciones del Puzzle 1 (índice 0) se cumplen
+            if (i == 0 && puzzleCompleted && !puzzle.isCompleted)
+            {
+                puzzle.isCompleted = true;
+                StartCoroutine(PlayWinPuzzleSoundWithDelay(2f));  // Reproduce el sonido con un delay de 2 segundos
+            }
+
             if (!puzzleCompleted)
             {
                 allPuzzlesCompleted = false;
-                break;
             }
         }
 
@@ -59,6 +65,12 @@ public class EscapeRoomManager : MonoBehaviour
         {
             EndGame(true);
         }
+    }
+
+    private IEnumerator PlayWinPuzzleSoundWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        AudioManager.Instance.PlayWinPuzzleSound();
     }
 
     public void SetPuzzleCondition(int puzzleIndex, int conditionIndex, bool value)
