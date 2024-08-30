@@ -18,8 +18,10 @@ public class Target : MonoBehaviour
     [SerializeField] private bool[] targets = new bool[2];
     public ParticleSystem successParticleLeft;
     public ParticleSystem successParticleRight;
-    public GameObject dartTemp;
-    private Rigidbody rbTemp;
+    public EscapeRoomManager escapeRoomManager;
+    //public GameObject dartTemp;
+
+    //private Rigidbody rbTemp;
 
 
     void Awake()
@@ -29,32 +31,18 @@ public class Target : MonoBehaviour
         rightMapScript = GameObject.Find("RightMap").GetComponent<DartReceiver>(); 
         targets[0] = false;
         targets[1] = false;
-        rbTemp = dartTemp.GetComponent<Rigidbody>();
+        //rbTemp = dartTemp.GetComponent<Rigidbody>();
     }
 
     void Start() {
-        rbTemp.AddForce(transform.forward, ForceMode.Impulse);
-        Debug.Log(dartManager.GetDartPosition(0));
-        Debug.Log(dartManager.GetDartPosition(1));
-        Debug.Log(dartManager.GetDartPosition(2));
-        Debug.Log(dartManager.GetDartPosition(3));
-        Debug.Log(dartManager.GetDartPosition(4));
-        Debug.Log(dartManager.GetDartPosition(5));
-        
-
+        //rbTemp.AddForce(transform.forward, ForceMode.Impulse);
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    } 
 
     private void OnCollisionEnter(Collision collision)
     {
         // check if you hit an enemy
         if(collision.gameObject.CompareTag("Dart"))
         {
-            Debug.Log("1");
             dart = collision.gameObject;
             rb = dart.GetComponent<Rigidbody>();
 
@@ -66,29 +54,34 @@ public class Target : MonoBehaviour
             {   targets[0] = true;
                 hit = true;
                 successParticleLeft.Play();
-                Debug.Log("2");
+                escapeRoomManager.SetPuzzleCondition(1, 0, true);
             } else if (rightMapScript.success  && !targets[1]){
                 targets[1] = true;
                 hit = true;
                 successParticleRight.Play();
-                Debug.Log("3");
+                escapeRoomManager.SetPuzzleCondition(1, 1, true);
             }
             
             if (hit){
-                Debug.Log("4");
                 dart.tag = "DartAttached";
-
-
-                // make sure projectile sticks to surface
                 rb.isKinematic = true;
                 dart.GetComponent<XRGrabInteractable>().enabled = false;
             } else {
-                Debug.Log("5");
                 rb.isKinematic = true;
-                int posTemp = dart.name[4];
-                Tween.LocalPosition(dart.transform, endValue: dartManager.GetDartPosition(posTemp), duration: 7);
+                rb.useGravity = false;
+                dart.GetComponent<XRGrabInteractable>().enabled = false;
+                int posTemp = dart.name[4] - '0'; // Convert dart index to int
+                Tween.LocalPosition(dart.transform, endValue: dartManager.GetDartPosition(posTemp), duration: 5);
+                StartCoroutine(reactivateDart(dart));
             }
-
         }
+    }
+
+    IEnumerator reactivateDart(GameObject dart)
+    {
+        yield return new WaitForSeconds(6);
+        dart.GetComponent<XRGrabInteractable>().enabled = true;      
+        rb.isKinematic = false;
+        rb.useGravity = true;
     }
 }
