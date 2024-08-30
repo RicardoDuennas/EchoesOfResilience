@@ -88,6 +88,9 @@ public class EscapeRoomManager : MonoBehaviour
         {
             puzzles[puzzleIndex].conditions[conditionIndex] = value;
         }
+
+        // Verifica inmediatamente después de actualizar la condición
+        CheckPuzzleCompletion();
     }
 
     void EndGame(bool success)

@@ -22801,7 +22801,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 0
-  looping: 0
+  looping: 1
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0
@@ -27535,9 +27535,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
+      propertyPath: sonidosVoces.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
       propertyPath: sonidosVoces.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: 2281d4ce04d234601bb998aea4865ecb, type: 3}
+    - target: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
+      propertyPath: sonidosVoces.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: b7af1a7b568d64de682d9b6dc44d20fb, type: 3}
     - target: {fileID: 275524624144201117, guid: 2ff0cb8b1d6bde44b819e43bc12d5483, type: 3}
       propertyPath: sonidosAmbientales.Array.size
       value: 11
