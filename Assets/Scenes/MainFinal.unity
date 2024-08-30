@@ -175,6 +175,7 @@ MonoBehaviour:
   - conditions: 00
     isCompleted: 0
   statusText: {fileID: 0}
+  chestParticleSystem: {fileID: 582483523}
 --- !u!1 &33663388
 GameObject:
   m_ObjectHideFlags: 0
@@ -22696,7 +22697,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &582483521
 Transform:
@@ -22705,12 +22706,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582483520}
-  m_LocalRotation: {x: -0.58810145, y: -0.41183874, z: -0.48683387, w: 0.49751216}
-  m_LocalPosition: {x: 0.084, y: 0.244, z: 0.285}
-  m_LocalScale: {x: 0.08, y: 0.07999999, z: 0.08}
+  m_LocalRotation: {x: 0.5943804, y: 0.40533653, z: 0.4791477, w: -0.5028238}
+  m_LocalPosition: {x: -0.02613986, y: 0.067, z: -0.018344626}
+  m_LocalScale: {x: 0.07999999, y: 0.07999998, z: 0.07999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1159313487}
+  m_Father: {fileID: 809410301}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -99.54, y: -79.23801, z: 0.0019989014}
 --- !u!199 &582483522
@@ -29426,6 +29427,11 @@ Transform:
   m_Father: {fileID: 138979405}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &809410301 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 732947410862002869, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+  m_PrefabInstance: {fileID: 1492709291}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &827263668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30684,11 +30690,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &1159313487 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8153258795816882986, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
-  m_PrefabInstance: {fileID: 1492709291}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1172062290
 GameObject:
   m_ObjectHideFlags: 0
@@ -32038,6 +32039,26 @@ PrefabInstance:
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1981968078393777233, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.668945
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981968078393777233, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.843769
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981968078393777233, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.71826583
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981968078393777233, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.69576883
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981968078393777233, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -448.177
+      objectReference: {fileID: 0}
     - target: {fileID: 2044702839966889817, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -32516,6 +32537,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3395307382745395595, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604015865550910652, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3604718390295072166, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
@@ -34316,7 +34341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8153258795816882986, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.43200004
+      value: 0.46
       objectReference: {fileID: 0}
     - target: {fileID: 8236212466076647805, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34544,11 +34569,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8746913272498441619, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.9086
+      value: -19.684
       objectReference: {fileID: 0}
     - target: {fileID: 8746913272498441619, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2456
+      value: 0.2434
+      objectReference: {fileID: 0}
+    - target: {fileID: 8746913272498441619, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.771
       objectReference: {fileID: 0}
     - target: {fileID: 8748736626894098763, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
@@ -34635,8 +34664,12 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8821954643070208400, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821954643070208400, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8892195378097589325, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34853,7 +34886,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6516559378294430291, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 358603593}
-    - targetCorrespondingSourceObject: {fileID: 8153258795816882986, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 732947410862002869, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 582483521}
     - targetCorrespondingSourceObject: {fileID: 3074109387054032966, guid: 594e039a6d03e49c096bc404e8b22ac8, type: 3}
@@ -35084,7 +35117,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 6
+    m_Bits: 7
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1

@@ -14,11 +14,12 @@ public class EscapeRoomManager : MonoBehaviour
     public Puzzle[] puzzles;
 
     public Text statusText;
-
+    public ParticleSystem chestParticleSystem;
     private bool gameOver = false;
 
     void Start()
     {
+        AudioManager.Instance.vFXSource.PlayOneShot(AudioManager.Instance.sonidosVoces[0]);
     }
 
     void Update()
@@ -60,6 +61,7 @@ public class EscapeRoomManager : MonoBehaviour
             {
                 puzzle.isCompleted = true;
                 StartCoroutine(ReproduccionPista(2, 4f));
+                StartCoroutine(ActivateChestParticles(4f));
             }
             if (!puzzleCompleted)
             {
@@ -104,6 +106,13 @@ public class EscapeRoomManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         AudioManager.Instance.vFXSource.PlayOneShot(AudioManager.Instance.sonidosVoces[index]);
+    }
+
+    // Nuevo método para activar las partículas del cofre después de un delay
+    private IEnumerator ActivateChestParticles(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        chestParticleSystem.Play();
     }
 
 }
