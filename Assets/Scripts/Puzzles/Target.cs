@@ -66,6 +66,7 @@ public class Target : MonoBehaviour
                 dart.tag = "DartAttached";
                 rb.isKinematic = true;
                 dart.GetComponent<XRGrabInteractable>().enabled = false;
+                /////// AQUI SONIDO Y CODIGO PARA VICTORIA DARDO ///////  
             } else {
                 rb.isKinematic = true;
                 rb.useGravity = false;
@@ -73,6 +74,7 @@ public class Target : MonoBehaviour
                 int posTemp = dart.name[4] - '0'; // Convert dart index to int
                 Tween.LocalPosition(dart.transform, endValue: dartManager.GetDartPosition(posTemp), duration: 5);
                 StartCoroutine(reactivateDart(dart));
+                /////// AQUI SONIDO Y CODIGO PARA FALLO DARDO ///////  
             }
         }
     }
