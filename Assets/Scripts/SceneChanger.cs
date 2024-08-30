@@ -7,4 +7,8 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene("MainFinal");
     }
+    public void StartNarrative()
+    {
+        SceneManager.LoadScene("NarrativeUi");
+    }
 }

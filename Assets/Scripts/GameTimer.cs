@@ -42,7 +42,8 @@ public class GameTimer : MonoBehaviour
 
     void GameOver()
     {
-        SceneManager.LoadScene("NarrativeUI");
+        SceneManager.LoadScene("GameOverUI"); 
     }
 }
+
 
