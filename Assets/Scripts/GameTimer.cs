@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI; 
+using UnityEngine.UI;
 public class GameTimer : MonoBehaviour
 {
-    public float timeRemaining = 300f; // 5 minutos en segundos
-    public Text timerText; 
+    public float timeRemaining = 900f; // 15 minutos en segundos
+    public Text timerText; // 
     private bool timerIsRunning = false;
 
     void Start()
@@ -37,7 +37,7 @@ public class GameTimer : MonoBehaviour
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
-        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds); 
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     void GameOver()

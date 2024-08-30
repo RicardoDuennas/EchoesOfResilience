@@ -14,11 +14,14 @@ public class Target : MonoBehaviour
     DartReceiver leftMapScript;
     DartReceiver rightMapScript;
     GameObject dart;
+    public DartManager dartManager;
     [SerializeField] private bool[] targets = new bool[2];
     public ParticleSystem successParticleLeft;
     public ParticleSystem successParticleRight;
-    public GameObject dartTemp;
-    private Rigidbody rbTemp;
+    public EscapeRoomManager escapeRoomManager;
+    //public GameObject dartTemp;
+
+    //private Rigidbody rbTemp;
 
 
     void Awake()
@@ -28,24 +31,18 @@ public class Target : MonoBehaviour
         rightMapScript = GameObject.Find("RightMap").GetComponent<DartReceiver>(); 
         targets[0] = false;
         targets[1] = false;
-        rbTemp = dartTemp.GetComponent<Rigidbody>();
+        //rbTemp = dartTemp.GetComponent<Rigidbody>();
     }
 
     void Start() {
-        rbTemp.AddForce(transform.forward, ForceMode.Impulse);
+        //rbTemp.AddForce(transform.forward, ForceMode.Impulse);
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    } 
 
     private void OnCollisionEnter(Collision collision)
     {
         // check if you hit an enemy
         if(collision.gameObject.CompareTag("Dart"))
         {
-            Debug.Log("1");
             dart = collision.gameObject;
             rb = dart.GetComponent<Rigidbody>();
 
@@ -57,30 +54,36 @@ public class Target : MonoBehaviour
             {   targets[0] = true;
                 hit = true;
                 successParticleLeft.Play();
-                Debug.Log("2");
+                escapeRoomManager.SetPuzzleCondition(1, 0, true);
             } else if (rightMapScript.success  && !targets[1]){
                 targets[1] = true;
                 hit = true;
                 successParticleRight.Play();
-                Debug.Log("3");
+                escapeRoomManager.SetPuzzleCondition(1, 1, true);
             }
             
             if (hit){
-                Debug.Log("4");
                 dart.tag = "DartAttached";
-
-
-                // make sure projectile sticks to surface
                 rb.isKinematic = true;
                 dart.GetComponent<XRGrabInteractable>().enabled = false;
+                /////// AQUI SONIDO Y CODIGO PARA VICTORIA DARDO ///////  
             } else {
-                Debug.Log("5");
-                Debug.Log(hit);
-                Debug.Log(dart.name);
                 rb.isKinematic = true;
-                Tween.LocalPosition(dart.transform, endValue: new Vector3(-53.76f,1.562f,-4.99f), duration: 7);
+                rb.useGravity = false;
+                dart.GetComponent<XRGrabInteractable>().enabled = false;
+                int posTemp = dart.name[4] - '0'; // Convert dart index to int
+                Tween.LocalPosition(dart.transform, endValue: dartManager.GetDartPosition(posTemp), duration: 5);
+                StartCoroutine(reactivateDart(dart));
+                /////// AQUI SONIDO Y CODIGO PARA FALLO DARDO ///////  
             }
-
         }
+    }
+
+    IEnumerator reactivateDart(GameObject dart)
+    {
+        yield return new WaitForSeconds(6);
+        dart.GetComponent<XRGrabInteractable>().enabled = true;      
+        rb.isKinematic = false;
+        rb.useGravity = true;
     }
 }
