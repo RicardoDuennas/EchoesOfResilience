@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class GameTimer : MonoBehaviour
 {
     public float timeRemaining = 300f; // 5 minutos en segundos
-    public Text timerText; // 
+    public Text timerText; 
     private bool timerIsRunning = false;
 
     void Start()
@@ -42,7 +42,8 @@ public class GameTimer : MonoBehaviour
 
     void GameOver()
     {
-        SceneManager.LoadScene("NarrativeUI"); 
+        SceneManager.LoadScene("GameOverUI"); 
     }
 }
+
 
